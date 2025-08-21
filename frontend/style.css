@@ -1,0 +1,201 @@
+:root {
+    /* Color Palette */
+    --primary-color: #1abc9c;           /* Aqua blue */
+    --primary-hover: #16a085;           /* Darker aqua */
+    --secondary-color: #9b59b6;         /* Soft violet */
+    --secondary-hover: #8e44ad;         /* Darker violet */
+    --background-gradient-start: #a1c4fd; /* Light blue gradient start */
+    --background-gradient-end: #c2e9fb;   /* Light blue gradient end */
+    --navbar-bg: #34495e;               /* Dark navy for navbar */
+    --footer-bg: #34495e;               /* Same for footer */
+    --container-bg: #ffffff;            /* White container */
+    --card-bg: #ecf0f1;                 /* Light gray cards */
+    --positive-color: #2ecc71;          /* Green for positive */
+    --negative-color: #e74c3c;          /* Red for negative */
+    --text-color: #2c3e50;              /* Dark text */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Spacing */
+    --padding-container: 40px 30px;
+    --padding-textarea: 15px;
+    --border-radius: 8px;
+    --border-radius-card: 6px;
+}
+
+/* General styles */
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background: linear-gradient(120deg, var(--background-gradient-start), var(--background-gradient-end));
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--navbar-bg);
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-container h1 {
+    margin: 0;
+}
+
+/* Container */
+/* Container */
+/* Container */
+.container {
+    width: 90%;                  /* take 90% of viewport width */
+    max-width: 900px;            /* limit max width */
+    margin: 50px auto;           /* centered with more top/bottom spacing */
+    background: var(--container-bg);
+    padding: var(--padding-container);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* horizontally center content */
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    max-width: 800px;            /* match larger container */
+    height: 120px;               /* slightly taller for comfort */
+    padding: var(--padding-textarea);
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+#history-list {
+    width: 100%;
+    max-width: 800px;            /* match container width */
+}
+
+
+/* Navbar styling */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--secondary-color);  /* highlight on hover */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* Textarea */
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: var(--padding-textarea);
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: none;
+}
+
+/* Buttons */
+button {
+    margin-top: 10px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Show more button */
+#show-more-btn {
+    margin-top: 10px;
+    padding: 8px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: var(--border-radius-card);
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#show-more-btn:hover {
+    background-color: var(--secondary-hover);
+}
+
+/* Result display */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* History */
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#history-list li {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: var(--border-radius-card);
+    border-left: 5px solid var(--primary-color);
+    background-color: var(--card-bg);
+}
+
+/* Colored sentiment labels */
+.positive {
+    color: var(--positive-color);
+    font-weight: bold;
+}
+
+.negative {
+    color: var(--negative-color);
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: var(--footer-bg);
+    color: white;
+    margin-top: auto;
+}
